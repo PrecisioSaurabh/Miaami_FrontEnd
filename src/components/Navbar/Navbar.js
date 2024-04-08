@@ -1,47 +1,94 @@
+// import React from "react";
+// import { Link } from "react-router-dom";
+// import logo from "../../assets/logo.png";
+// import Dashboard from "../../assets/Dashboard.png";
+// import AssetIcon from "../../assets/AssetsIcon.png";
+// import WorkOrderIcon from "../../assets/WorkOrderIcon.png";
+// import NotificationIcon from "../../assets/NotificationIcon.png";
+// import SettingIcon from "../../assets/SettingIcon.png";
+
+// const Navbar = () => {
+//   return (
+//     <nav className="bg-white -800 text-black p-4 flex justify-between">
+//      <div className="container mx-auto flex justify-between items-center">
+// <div className="container mx-auto flex items-center space-x-4">
+//   <img src={logo} alt="Logo"/>
+//   <Link to="/">
+//     <div  className="flex flex-col items-center justify-center hover:text-gray-300">
+//       <img src={Dashboard} alt="Logo"  />
+//       <div>Dashboard</div>
+//     </div>
+//   </Link>
+//   <Link to="/about" >
+//     <div className="flex flex-col items-center justify-center hover:text-gray-300" >
+//       <img src={WorkOrderIcon} alt="Logo" />
+//       <div>Work and order</div>
+//     </div>
+//   </Link>
+//   <Link to="/services">
+//     <div className="flex flex-col items-center justify-center hover:text-gray-300">
+//       <img src={AssetIcon} alt="Logo"  />
+//       <div>Assets</div>
+//     </div>
+//   </Link>
+// </div>
+//       <div className="flex space-x-4 items-center justify-center">
+// <input type="search" placeholder="Search" />
+// <div className="flex space-x-2">
+//   <img src={NotificationIcon} alt="NotificationIcon"/>
+//   <img src= {SettingIcon} alt="SettingIcon"/>
+// </div>
+//       </div>
+//      </div>
+//     </nav>
+//   );
+// };
+// export default Navbar;
+
 // Navbar.js
+
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import Dashboard from "../../assets/Dashboard.png";
 import AssetIcon from "../../assets/AssetsIcon.png";
-import WorkOrderIcon from "../../assets/WorkOrderIcon.png"; 
+import WorkOrderIcon from "../../assets/WorkOrderIcon.png";
 import NotificationIcon from "../../assets/NotificationIcon.png";
-import SettingIcon from "../../assets/Setting.png";
-
+import SettingIcon from "../../assets/SettingIcon.png";
 const Navbar = () => {
   return (
-    <nav className="bg-white -800 text-black p-4 flex justify-between">
-      <div className="container mx-auto flex items-center">
-        <img src={logo} alt="Logo" className="h-8" />
-        <Link to="/" className="hover:text-gray-300">
-          <div>
-            <img src={Dashboard} alt="Logo" className="h-8" />
-            <div>Dashboard</div>
-          </div>
-        </Link>
-        <Link to="/about" className="hover:text-gray-300">
-          <div>
-            <img src={WorkOrderIcon} alt="Logo" className="h-8" />
-            <div>Work and order</div>
-          </div>
-        </Link>
-        <Link to="/services" className="hover:text-gray-300">
-          <div>
-            <img src={AssetIcon} alt="Logo" className="h-8" />
-            <div>Assets</div>
-          </div>
-        </Link>
-      </div>
-      <div className="flex space-x-4">
-        <input type="search" placeholder="Search" />
-        <div className="flex space-x-4"> 
-          <img src={NotificationIcon} alt="SettingIcon" className="h-8" />
-          <img src= {SettingIcon} alt="SettingIcon" className="h-8" />
+    <nav className="bg-white-800 text-black p-4 ">
+      <div className="container mx-auto flex justify-between items-center">
+        {/* <div className="text-xl font-semibold">My Website</div> */}
+        <div className="container mx-auto flex items-center space-x-4">
+          <img src={logo} alt="Logo" />
+          <Link to="/">
+            <div className="flex flex-col items-center justify-center hover:text-gray-300">
+              <img src={Dashboard} alt="Logo" />
+              <div>Dashboard</div>
+            </div>
+          </Link>
+          <Link to="/about">
+            <div className="flex flex-col items-center justify-center hover:text-gray-300">
+              <img src={WorkOrderIcon} alt="Logo" />
+              <div>Work and order</div>
+            </div>
+          </Link>
+          <Link to="/services">
+            <div className="flex flex-col items-center justify-center hover:text-gray-300">
+              <img src={AssetIcon} alt="Logo" />
+              <div>Assets</div>
+            </div>
+          </Link>
         </div>
+        <input type="search" placeholder="Search" className= "border border-gray-300 border-solid rounded-md p-2 "/>
+          <div className="flex space-x-2">
+            <img src={NotificationIcon} alt="NotificationIcon" />
+            <img src={SettingIcon} alt="SettingIcon" />
+          </div>
       </div>
     </nav>
   );
 };
+
 export default Navbar;
-
-

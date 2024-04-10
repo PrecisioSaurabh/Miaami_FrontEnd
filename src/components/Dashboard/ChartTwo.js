@@ -73,7 +73,7 @@ const ChartTwo = () => {
 //       .replace(/contrast/i, 'Contrast');
 //   };
   return (
-    <div className="w-1/3 mt-8">
+    <div className="w-1/3 mt-8 bg-white rounded-lg">
       <div className="mb-3 justify-between gap-4 sm:flex bg-violet-100">
         <div>
           <h5 className="text-xl font-semibold text-black dark:text-white">

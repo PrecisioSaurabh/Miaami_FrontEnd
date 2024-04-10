@@ -8,7 +8,7 @@ import NotificationIcon from "../../assets/NotificationIcon.png";
 import SettingIcon from "../../assets/SettingIcon.png";
 const Navbar = () => {
   return (
-    <nav className="bg-white-800 text-black p-4 mr-10">
+    <nav className="bg-white text-black p-4 mr-10">
       <div className="container mx-auto flex justify-between items-center">
         {/* <div className="text-xl font-semibold">My Website</div> */}
         <div className="container mx-auto flex items-center space-x-4">

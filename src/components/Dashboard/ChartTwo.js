@@ -1,11 +1,6 @@
-// import { createRoot } from 'react-dom/client';
-// import './index.css';
-/**
- * Sample for Spline series
- */
-import * as React from 'react';
-import addCircleIcon from "../../assets/addCircleIcon.png"
-import { useEffect, useRef } from 'react';
+import * as React from "react";
+import addCircleIcon from "../../assets/addCircleIcon.png";
+import { useEffect, useRef } from "react";
 import {
   ChartComponent,
   SeriesCollectionDirective,
@@ -19,20 +14,18 @@ import {
   SplineSeries,
   Tooltip,
   Highlight,
-} from '@syncfusion/ej2-react-charts';
+} from "@syncfusion/ej2-react-charts";
 
-import { Browser } from '@syncfusion/ej2-base';
+import { Browser } from "@syncfusion/ej2-base";
 export let data1 = [
-  { x: 'Sun', y: 15 },
-  { x: 'Mon', y: 22 },
-  { x: 'Tue', y: 32 },
-  { x: 'Wed', y: 31 },
-  { x: 'Thu', y: 29 },
-  { x: 'Fri', y: 24 },
-  { x: 'Sat', y: 18 },
+  { x: "Sun", y: 15 },
+  { x: "Mon", y: 22 },
+  { x: "Tue", y: 32 },
+  { x: "Wed", y: 31 },
+  { x: "Thu", y: 29 },
+  { x: "Fri", y: 24 },
+  { x: "Sat", y: 18 },
 ];
-// export let data2 = [{ x: 'Sun', y: 10 }, { x: 'Mon', y: 18 }, { x: 'Tue', y: 28 }, { x: 'Wed', y: 28 }, { x: 'Thu', y: 26 }, { x: 'Fri', y: 20 }, { x: 'Sat', y: 15 }];
-// export let data3 = [{ x: 'Sun', y: 2 }, { x: 'Mon', y: 12 }, { x: 'Tue', y: 22 }, { x: 'Wed', y: 23 }, { x: 'Thu', y: 19 }, { x: 'Fri', y: 13 }, { x: 'Sat', y: 8 }];
 const SAMPLE_CSS = `
     .control-fluid {
         padding: 0px !important;
@@ -60,20 +53,12 @@ const SAMPLE_CSS = `
 const ChartTwo = () => {
   let chartInstance = useRef(null);
   const onChartLoad = (args) => {
-    let chart = document.getElementById('charts');
-    chart.setAttribute('title', '');
+    let chart = document.getElementById("charts");
+    chart.setAttribute("title", "");
   };
-//   const load = (args) => {
-//     let selectedTheme = location.hash.split('/')[1];
-//     selectedTheme = selectedTheme ? selectedTheme : 'Material';
-//     args.chart.theme = (
-//       selectedTheme.charAt(0).toUpperCase() + selectedTheme.slice(1)
-//     )
-//       .replace(/-dark/i, 'Dark')
-//       .replace(/contrast/i, 'Contrast');
-//   };
+
   return (
-    <div className="w-1/3 mt-8 bg-white rounded-lg">
+    <div className="w-1/3 h-80 mt-8 bg-white rounded-lg mr-8">
       <div className="mb-3 justify-between gap-4 sm:flex bg-violet-100">
         <div>
           <h5 className="text-xl font-semibold text-black dark:text-white">
@@ -83,29 +68,33 @@ const ChartTwo = () => {
         <div>
           <div className="relative z-20 inline-block">
             <img src={addCircleIcon} alt="AddCircleIcon" />
-           </div>
+          </div>
         </div>
       </div>
       <style>{SAMPLE_CSS}</style>
       <div className="control-section">
         <ChartComponent
           id="charts"
-          style={{ textAlign: 'center' }}
+          style={{ textAlign: "center" }}
           ref={chartInstance}
           primaryXAxis={{
-            valueType: 'Category',
+            valueType: "Category",
             interval: 1,
             majorGridLines: { width: 0 },
-            labelIntersectAction: 'Rotate90',
+            labelIntersectAction: "Rotate90",
             majorTickLines: { width: 0 },
             minorTickLines: { width: 0 },
           }}
-          width={Browser.isDevice ? '100%' : '75%'}
+          width={Browser.isDevice ? "100%" : "75%"}
           legendSettings={{ enableHighlight: true }}
           chartArea={{ border: { width: 0 } }}
-        //   load={load.bind(this)}
+          //   load={load.bind(this)}
           primaryYAxis={{
-            labelFormat: '{value}°C',
+            interval: 5,
+
+            minimum: 10,
+            maximum: 35,
+            labelFormat: "{value}°C",
             lineStyle: { width: 0 },
             majorTickLines: { width: 0 },
             minorTickLines: { width: 0 },
@@ -124,22 +113,6 @@ const ChartTwo = () => {
               Highlight,
             ]}
           />
-          <AnnotationsDirective>
-            <AnnotationDirective
-              content='<div id="chart_cloud"><img src="https://ej2.syncfusion.com/react/demos/src/chart/images/cloud.png" style="width: 41px; height: 41px"/></div>'
-              x="Sun"
-              y={2}
-              coordinateUnits="Point"
-              verticalAlignment="Top"
-            />
-            <AnnotationDirective
-              content='<div id="chart_cloud"><img src="https://ej2.syncfusion.com/react/demos/src/chart/images/sunny.png"   style="width: 41px; height: 41px"/></div>'
-              x="Tue"
-              y={33}
-              coordinateUnits="Point"
-              verticalAlignment="Top"
-            />
-          </AnnotationsDirective>
           <SeriesCollectionDirective>
             <SeriesDirective
               dataSource={data1}
@@ -150,10 +123,9 @@ const ChartTwo = () => {
               type="Spline"
               marker={{ visible: true, width: 1, height: 1 }}
             />
-         
           </SeriesCollectionDirective>
         </ChartComponent>
-        <div style={{ float: 'right', marginRight: '10px' }}>
+        <div style={{ float: "right", marginRight: "10px" }}>
           {/* Source: &nbsp;
           <a
             href="http://www.worldweatheronline.com/mooresville-weather/north-carolina/us.aspx"

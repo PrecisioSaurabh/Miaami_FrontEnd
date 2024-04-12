@@ -7,7 +7,7 @@ const Dashboard = () => {
   return (
     <>
       <div className='ml-4'> Dashboard</div>
-      <div className='flex space-x-4'>
+      <div className='flex justify-between gap-8 px-12'>
         <ChartOne/>
         <ChartThree/>
         <ChartTwo/>

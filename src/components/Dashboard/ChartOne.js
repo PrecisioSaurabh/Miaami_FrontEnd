@@ -37,7 +37,7 @@ const ChartOne = () => {
   };
 
   return (
-    <div className="w-1/3 ml-8 rounded-lg mt-8 bg-white">
+    <div className="w-1/3 h-80 rounded-lg mt-8 bg-white">
       <div className="mb-3 justify-between gap-4 sm:flex bg-violet-100">
         <div>
           <h5 className="text-xl font-semibold text-black dark:text-white">

@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { Home } from "./pages/index";
+// import { Home } from "./pages/index";
 // components
 import Navbar from "./components/Navbar/Navbar";
 import Dashboard from './components/Dashboard/Dashboard';
@@ -26,6 +26,5 @@ function App() {
     </div>
   );
 }
-
 export default App;
 

@@ -1,5 +1,6 @@
 import * as React from "react";
-import addCircleIcon from "../../assets/addCircleIcon.png";
+import addCircleIcon from '../../assets/DashboardIcons/addCircleIcon.png';
+// import attachIcon from "../../assets/DashboardIcons/attach-icon.png";
 import { useEffect, useRef } from "react";
 import {
   ChartComponent,
@@ -18,14 +19,15 @@ import {
 
 import { Browser } from "@syncfusion/ej2-base";
 export let data1 = [
-  { x: "Sun", y: 15 },
-  { x: "Mon", y: 22 },
-  { x: "Tue", y: 32 },
-  { x: "Wed", y: 31 },
-  { x: "Thu", y: 29 },
-  { x: "Fri", y: 24 },
-  { x: "Sat", y: 18 },
+  { x: "Sun", y: 10 },
+  { x: "Mon", y: 15 },
+  { x: "Tue", y: 20 },
+  { x: "Wed", y: 22 },
+  { x: "Thu", y: 20 },
+  { x: "Fri", y: 11 },
+  { x: "Sat", y: 12},
 ];
+
 const SAMPLE_CSS = `
     .control-fluid {
         padding: 0px !important;
@@ -58,7 +60,7 @@ const ChartTwo = () => {
   };
 
   return (
-    <div className="w-1/3 h-80 mt-8 bg-white rounded-lg mr-8">
+    <div className="w-1/3 mt-8 bg-white rounded-lg mr-8">
       <div className="mb-3 justify-between gap-4 sm:flex bg-violet-100">
         <div>
           <h5 className="text-xl font-semibold text-black dark:text-white">
@@ -73,6 +75,7 @@ const ChartTwo = () => {
       </div>
       <style>{SAMPLE_CSS}</style>
       <div className="control-section">
+        <div>Chart with data</div>
         <ChartComponent
           id="charts"
           style={{ textAlign: "center" }}
@@ -85,15 +88,16 @@ const ChartTwo = () => {
             majorTickLines: { width: 0 },
             minorTickLines: { width: 0 },
           }}
-          width={Browser.isDevice ? "100%" : "75%"}
+          // width={Browser.isDevice ? "100%" : "75%"}
+          height="250px" 
+          width="100%"
           legendSettings={{ enableHighlight: true }}
           chartArea={{ border: { width: 0 } }}
           //   load={load.bind(this)}
           primaryYAxis={{
             interval: 5,
-
             minimum: 10,
-            maximum: 35,
+            maximum: 22,
             labelFormat: "{value}°C",
             lineStyle: { width: 0 },
             majorTickLines: { width: 0 },

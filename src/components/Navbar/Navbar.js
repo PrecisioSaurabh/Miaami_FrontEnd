@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
-import Dashboard from "../../assets/Dashboard.png";
-import AssetIcon from "../../assets/AssetsIcon.png";
-import WorkOrderIcon from "../../assets/WorkOrderIcon.png";
-import NotificationIcon from "../../assets/NotificationIcon.png";
-import SettingIcon from "../../assets/SettingIcon.png";
-import SearchIcon from "../../assets/Search.png"; 
+
+// import logo from "../../assets/NavIcons/logo.png";
+
+import logo from "../../assets/NavIcons/logo.png";
+import Dashboard from "../../assets/NavIcons/Dashboard.png";
+import AssetIcon from "../../assets/NavIcons/AssetsIcon.png";
+import WorkOrderIcon from "../../assets/NavIcons/WorkOrderIcon.png";
+import NotificationIcon from "../../assets/NavIcons/NotificationIcon.png";
+import SettingIcon from "../../assets/NavIcons/SettingIcon.png";
+import SearchIcon from "../../assets/NavIcons/Search.png"; 
 
 const Navbar = () => {
   const [searchValue, setSearchValue] = useState("");

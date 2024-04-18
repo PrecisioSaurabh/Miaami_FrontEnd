@@ -1,4 +1,4 @@
-import addCircleIcon from '../../assets/addCircleIcon.png';
+import addCircleIcon from '../../assets/DashboardIcons/addCircleIcon.png';
 import { useState } from 'react';
 
 const brandData = [

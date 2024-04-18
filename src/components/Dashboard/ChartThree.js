@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactApexChart from 'react-apexcharts';
-import addCircleIcon from '../../assets/addCircleIcon.png';
+import addCircleIcon from '../../assets/DashboardIcons/addCircleIcon.png';
 
 const App = () => {
   const [chartState, setChartState] = useState({

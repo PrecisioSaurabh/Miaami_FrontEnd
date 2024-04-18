@@ -1,14 +1,12 @@
 import * as React from "react";
-import addCircleIcon from '../../assets/DashboardIcons/addCircleIcon.png';
+import addCircleIcon from "../../assets/DashboardIcons/addCircleIcon.png";
 // import attachIcon from "../../assets/DashboardIcons/attach-icon.png";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import {
   ChartComponent,
   SeriesCollectionDirective,
   SeriesDirective,
   Inject,
-  AnnotationsDirective,
-  AnnotationDirective,
   ChartAnnotation,
   Legend,
   Category,
@@ -17,7 +15,7 @@ import {
   Highlight,
 } from "@syncfusion/ej2-react-charts";
 
-import { Browser } from "@syncfusion/ej2-base";
+// import { Browser } from "@syncfusion/ej2-base";
 export let data1 = [
   { x: "Sun", y: 10 },
   { x: "Mon", y: 15 },
@@ -25,7 +23,7 @@ export let data1 = [
   { x: "Wed", y: 22 },
   { x: "Thu", y: 20 },
   { x: "Fri", y: 11 },
-  { x: "Sat", y: 12},
+  { x: "Sat", y: 12 },
 ];
 
 const SAMPLE_CSS = `
@@ -89,7 +87,7 @@ const ChartTwo = () => {
             minorTickLines: { width: 0 },
           }}
           // width={Browser.isDevice ? "100%" : "75%"}
-          height="250px" 
+          height="250px"
           width="100%"
           legendSettings={{ enableHighlight: true }}
           chartArea={{ border: { width: 0 } }}

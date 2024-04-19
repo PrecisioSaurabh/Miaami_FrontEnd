@@ -32,10 +32,10 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="/about">
+            <Link to="/workorder">
               <div className="flex flex-col items-center justify-center hover:text-gray-300">
                 <img src={WorkOrderIcon} alt="WorkOrder" />
-                <div>Work and order</div>
+                <div>Work Order</div>
               </div>
             </Link>
           </li>

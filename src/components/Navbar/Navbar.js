@@ -2,15 +2,16 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 // import logo from "../../assets/NavIcons/logo.png";
-
 import logo from "../../assets/NavIcons/logo.png";
-import Dashboard from "../../assets/NavIcons/Dashboard.png";
+// import Dashboard from "../../assets/NavIcons/Dashboard.png";
+import DashBoardIcon from "../../assets/NavIcons/DashBoardIcon.png";
 import AssetIcon from "../../assets/NavIcons/AssetsIcon.png";
 import WorkOrderIcon from "../../assets/NavIcons/WorkOrderIcon.png";
 import NotificationIcon from "../../assets/NavIcons/NotificationIcon.png";
 import SettingIcon from "../../assets/NavIcons/SettingIcon.png";
 import SearchIcon from "../../assets/NavIcons/Search.png"; 
-
+import Inventory from "../../assets/NavIcons/Inventory.png";
+import Reports from "../../assets/NavIcons/Reports.png";
 const Navbar = () => {
   const [searchValue, setSearchValue] = useState("");
 
@@ -26,8 +27,8 @@ const Navbar = () => {
           <li>
             <Link to="/dashboard">
               <div className="flex flex-col items-center justify-center hover:text-gray-300">
-                <img src={Dashboard} alt="Dashboard" />
-                <div>Dashboard</div>
+                <img src={DashBoardIcon} alt="Dashboard" />
+                <div className="mt-1">Dashboard</div>
               </div>
             </Link>
           </li>
@@ -44,6 +45,22 @@ const Navbar = () => {
               <div className="flex flex-col items-center justify-center hover:text-gray-300">
                 <img src={AssetIcon} alt="Asset" />
                 <div>Assets</div>
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact">
+              <div className="flex flex-col items-center justify-center hover:text-gray-300">
+                <img src={Inventory} alt="Asset" />
+                <div className="mt-0.5">Inventory</div>
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact">
+              <div className="flex flex-col items-center justify-center hover:text-gray-300">
+                <img src={Reports} alt="Asset" />
+                <div className="mt-0.5">Reports</div>
               </div>
             </Link>
           </li>
@@ -73,7 +90,6 @@ const Navbar = () => {
     </nav>
   );
 };
-
 export default Navbar;
 
 
